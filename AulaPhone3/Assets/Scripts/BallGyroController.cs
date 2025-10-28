@@ -43,5 +43,20 @@ public class BallGyroController : MonoBehaviour
     {
         Quaternion worldRot = GetWorldAttitude();
         Quaternion rel = Quaternion.Inverse(calib) * worldRot;
+
+        Vector3 fwd = rel * Vector3.forward;
+        Vector3 dir = new Vector3(fwd.x, 0f, fwd.z);
+
+        if (dir.magnitude < deadZone)
+        {
+            if (rb.linearVelocity.magnitude < sleepvel && rb.angularVelocity.magnitude < sleepvel)
+            {
+                rb.Sleep();
+                return;
+            }
+
+            rb.WakeUp();
+            rb.AddForce(dir.normalized * dir.magnitude * speed, ForceMode.Acceleration);
+        }
     }
 }
