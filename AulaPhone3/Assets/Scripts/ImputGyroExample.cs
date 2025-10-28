@@ -14,7 +14,12 @@ public class ImputGyroExample : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.Label(new Rect(500, 500, 500, 500), "Gyro rotation rate: " + m_Gyro.rotationRate);
+        GUIStyle style = new GUIStyle(GUI.skin.label);
+        style.fontSize = 60;
+
+        
+
+        GUI.Label(new Rect(Screen.width * 0.1f, Screen.height * 0.1f, Screen.width * 0.8f, Screen.height * 0.1f), "Gyro rotation rate: " + m_Gyro.rotationRate, style);
         //GUI.Label(new Rect(500, 500, 500, 500), "Gyro rotation Attitude: " + m_Gyro.attitude);
         //GUI.Label(new Rect(500, 500, 500, 500), "Gyro enabled " + m_Gyro.enabled);
     }
