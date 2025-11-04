@@ -52,8 +52,8 @@ public class BallGyroController : MonoBehaviour
             if (rb.linearVelocity.magnitude < sleepvel && rb.angularVelocity.magnitude < sleepvel)
             {
                 rb.Sleep();
-                return;
             }
+            return;
 
             rb.WakeUp();
             rb.AddForce(dir.normalized * dir.magnitude * speed, ForceMode.Acceleration);

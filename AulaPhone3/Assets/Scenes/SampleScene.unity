@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -269,6 +270,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee54227da144df4a99fdc9890e6e065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e54490d0830a44439ede9f650d9ec09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1553401999}
+  height: 20
+  smooth: 5
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +577,7 @@ GameObject:
   - component: {fileID: 1553401996}
   - component: {fileID: 1553401995}
   - component: {fileID: 1553402000}
+  - component: {fileID: 1553402001}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -691,11 +708,31 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553401994}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbe36144296d29a4b8a418070e6851be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 12
+  deadZone: 0.012
+  sleepvel: 0.02
+  rotFixEuler: {x: 90, y: 0, z: 0}
+  autoCalibrationOnStart: 1
+--- !u!114 &1553402001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553401994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47c99649eece404ea8a12f56c6c0f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 12
+  deadZone: 0.03
+  autoCalibraionOnStart: 1
 --- !u!1 &1576937021
 GameObject:
   m_ObjectHideFlags: 0
